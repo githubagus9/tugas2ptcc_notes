@@ -1,0 +1,170 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Warna utama */
+  :root {
+    --bg-dark: #121212;
+    --primary: #1f2937;
+    --secondary: #374151;
+    --accent: #38bdf8;
+    --text-light: #e5e7eb;
+    --text-dark: #9ca3af;
+  }
+  
+  /* Body */
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Judul */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--accent);
+  }
+  
+  /* Form */
+  form {
+    background-color: var(--primary);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+  }
+  
+  /* Label */
+  label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+    color: var(--text-dark);
+  }
+  
+  /* Input */
+  input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: var(--text-light);
+    font-size: 1rem;
+  }
+  
+  input::placeholder {
+    color: var(--text-dark);
+  }
+  
+  input:focus {
+    outline: 2px solid var(--accent);
+  }
+  
+  /* Tombol Simpan */
+  button {
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0ea5e9;
+    transform: scale(1.05);
+  }
+  
+  /* Tabel */
+  table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+  }
+  
+  /* Header Tabel */
+  th {
+    background-color: var(--secondary);
+    color: var(--text-light);
+    padding: 12px;
+    text-align: left;
+  }
+  
+  /* Isi Tabel */
+  td {
+    padding: 10px;
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--secondary);
+  }
+  
+  /* Hover Tabel */
+  tr:hover {
+    background-color: #1f2a37;
+    transition: 0.3s ease;
+  }
+  
+  /* Tombol Edit & Hapus */
+  .btn-edit,
+  .btn-hapus {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+  }
+  
+  .btn-edit {
+    background-color: #facc15;
+    color: #000;
+  }
+  
+  .btn-edit:hover {
+    background-color: #eab308;
+  }
+  
+  .btn-hapus {
+    background-color: #f43f5e;
+    color: #fff;
+  }
+  
+  .btn-hapus:hover {
+    background-color: #e11d48;
+  }
+  
+  /* Responsif */
+  @media (max-width: 600px) {
+    form {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    input {
+      width: 100%;
+    }
+  
+    table {
+      width: 100%;
+    }
+  }
+  
