@@ -1,6 +1,8 @@
 // Ngambil elemen form
 const formulir = document.querySelector("form");
 
+const url = "https://bagusbe-970101336895.us-central1.run.app";
+
 // Bikin trigger event submit pada elemen form
 formulir.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -23,12 +25,12 @@ formulir.addEventListener("submit", async (e) => {
   try {
     if (id === "") {
       // Tambah note (POST)
-      await axios.post("http://localhost:5000/notes", { title, content }, {
+      await axios.post(`${url}/notes`, { title, content }, {
         headers: { "Content-Type": "application/json" }
       });
     } else {
       // Update note (PUT)
-      await axios.patch(`http://localhost:5000/notes/${id}`, { title, content }, {
+      await axios.patch(`${url}/notes/${id}`, { title, content }, {
         headers: { "Content-Type": "application/json" }
       });
     }
@@ -56,7 +58,7 @@ function resetForm() {
 // GET Notes
 async function getNotes() {
   try {
-    const { data } = await axios.get("http://localhost:5000/notes");
+    const { data } = await axios.get(`${url}/notes`);
 
     const table = document.querySelector("#table-notes");
     let tampilan = "";
@@ -93,7 +95,7 @@ function hapusNote() {
     btn.addEventListener("click", async () => {
       const id = btn.dataset.id;
       try {
-        await axios.delete(`http://localhost:5000/notes/${id}`);
+        await axios.delete(`${url}/notes/${id}`);
         getNotes();
       } catch (error) {
         console.log("Gagal menghapus:", error);
