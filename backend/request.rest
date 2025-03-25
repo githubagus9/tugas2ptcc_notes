@@ -13,13 +13,13 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:5000/notes/1
+PATCH http://localhost:5000/notes/5
 Content-Type: application/json
 
 {
-    "title": "TUGAS PRAKTIKUM",
-    "content": "TUGAS PRAK TCC DL 3 Maret"
+    "title": "TUGAS BAGUS",
+    "content": "TUGAS GRAFIKA 9 MARET"
 }
 
 ###
-DELETE http://localhost:5000/notes/2
+DELETE http://localhost:5000/notes/5
