@@ -15,7 +15,7 @@ steps:
       [
         "run",
         "deploy",
-        "notes-be077",
+        "notes-be180",
         "--image",
         "gcr.io/$PROJECT_ID/notes-be180",
         "--timeout",
